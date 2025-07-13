@@ -1,0 +1,11 @@
+  <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold text-blue-900 mb-8">Experiencia por Industrias</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <app-experiencia-card 
+            *ngFor="let industria of industrias" 
+            [industria]="industria">
+          </app-experiencia-card>
+        </div>
+      </div>
+    </section>

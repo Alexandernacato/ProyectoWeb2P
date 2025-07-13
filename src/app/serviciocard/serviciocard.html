@@ -1,0 +1,16 @@
+   <div class="servicio-card">
+      <div class="servicio-header">
+        <img [src]="servicio.icono" [alt]="servicio.titulo" class="servicio-icon">
+        <h3 class="servicio-title">{{ servicio.titulo }}</h3>
+      </div>
+      <p class="servicio-description">{{ servicio.descripcion }}</p>
+      <ul class="servicio-features">
+        <li *ngFor="let bullet of servicio.bullets" class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          {{ bullet }}
+        </li>
+      </ul>
+      <button class="servicio-button">Más información</button>
+    </div>

@@ -1,0 +1,19 @@
+ <div class="card">
+      <div class="card-header">
+        <svg class="icono" [attr.viewBox]="industria.icono.viewBox || '0 0 24 24'">
+          <path [attr.d]="industria.icono.path" fill="currentColor"/>
+        </svg>
+        <h3>{{industria.titulo}}</h3>
+      </div>
+      <div class="card-body">
+        <p>{{industria.descripcion}}</p>
+      </div>
+      <div class="card-footer">
+        <a class="proyectos-link">
+          {{industria.proyectos}}
+          <svg class="arrow" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>

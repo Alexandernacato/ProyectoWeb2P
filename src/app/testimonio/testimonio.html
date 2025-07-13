@@ -1,0 +1,13 @@
+<!-- src/app/components/testimonios/testimonios.component.html -->
+<section class="testimonios-section">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <p class="section-subtitle">Testimonios de quienes han trabajado con nosotros</p>
+    
+    <div class="testimonios-grid">
+     <app-testimoniocard  *ngFor="let testimonio of testimonios" 
+        [testimonio]="testimonio">  
+     </app-testimoniocard>
+    </div>
+  </div>
+</section>

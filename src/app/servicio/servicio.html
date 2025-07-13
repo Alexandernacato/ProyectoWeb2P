@@ -1,0 +1,15 @@
+ <app-header></app-header>
+ <section class="servicios-section">
+      <div class="container">
+        <h2 class="section-title">Nuestros Servicios Profesionales</h2>
+        <p class="section-subtitle">Soluciones tecnológicas a medida para tu negocio</p>
+        
+        <div class="servicios-grid">
+          <app-serviciocard *ngFor="let servicio of servicios" 
+            [servicio]="servicio"></app-serviciocard>
+         
+        </div>
+      </div>
+    </section>
+    <app-proceso-trabajo></app-proceso-trabajo>
+<app-footer></app-footer>

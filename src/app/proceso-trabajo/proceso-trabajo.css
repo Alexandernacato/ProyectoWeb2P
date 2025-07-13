@@ -1,0 +1,46 @@
+ .proceso-section {
+      padding: 5rem 0;
+      background-color: #f8fafc;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #1e293b;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #64748b;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 2.1rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e2e8f0;
+    }
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 2rem;
+      }
+      .timeline::before {
+        left: 1.1rem;
+      }
+    }

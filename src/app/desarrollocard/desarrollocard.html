@@ -1,0 +1,12 @@
+<div class="desarrollo-card">
+  <div class="card-image">
+    <img [src]="desarrollo.imagen" [alt]="desarrollo.nombre">
+  </div>
+  <div class="card-content">
+    <h3>{{ desarrollo.nombre }}</h3>
+    <p class="description">{{ desarrollo.descripcion }}</p>
+    <div class="tech-tags">
+      <span class="tech-tag" *ngFor="let tech of desarrollo.tecnologias">{{ tech }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+/* src/app/components/testimonio-card/testimonio-card.component.css */
+.testimonio-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonio-estrellas {
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonio-estrellas .filled {
+  color: #f59e0b;
+}
+
+.testimonio-comentario {
+  font-style: italic;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonio-nombre {
+  color: #2d3748;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.testimonio-cargo {
+  color: #718096;
+  margin: 0.3rem 0 0 0;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,43 @@
+<div class="tech-carousel-container">
+  <h2 class="section-title">Tecnologías que Dominamos</h2>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" (click)="prevSlide()" 
+            (mouseenter)="pauseCarousel()" (mouseleave)="resumeCarousel()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+      </svg>
+    </button>
+    
+    <div class="technologies-wrapper" (mouseenter)="pauseCarousel()" (mouseleave)="resumeCarousel()">
+      <div class="technologies-track" [style.transform]="'translateX(' + (-currentIndex * (100/visibleCards)) + '%)'">
+        <div class="technology-card" *ngFor="let tech of tecnologias">
+          <div class="tech-logo-container">
+            <img [src]="tech.logo" [alt]="tech.nombre" class="tech-logo">
+          </div>
+          <h3 class="tech-name">{{ tech.nombre }}</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width.%]="tech.dominio"></div>
+            </div>
+            <span class="skill-percent">{{ tech.dominio }}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-button next" (click)="nextSlide()"
+            (mouseenter)="pauseCarousel()" (mouseleave)="resumeCarousel()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="carousel-dots">
+    <span *ngFor="let dot of getDotsArray(); let i = index" 
+          [class.active]="i === currentIndex"
+          (click)="goToSlide(i)"
+          (mouseenter)="pauseCarousel()" (mouseleave)="resumeCarousel()"></span>
+  </div>
+</div>

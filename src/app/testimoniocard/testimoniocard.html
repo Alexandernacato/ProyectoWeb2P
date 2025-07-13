@@ -1,0 +1,13 @@
+<!-- src/app/components/testimonio-card/testimonio-card.component.html -->
+<div class="testimonio-card">
+  <div class="testimonio-content">
+    <div class="testimonio-estrellas">
+      <span *ngFor="let filled of estrellas" [class.filled]="filled">★</span>
+    </div>
+    <p class="testimonio-comentario">"{{ testimonio.comentario }}"</p>
+    <div class="testimonio-info">
+      <h3 class="testimonio-nombre">{{ testimonio.nombre }}</h3>
+      <p class="testimonio-cargo">{{ testimonio.cargo }}, {{ testimonio.empresa }}</p>
+    </div>
+  </div>
+</div>

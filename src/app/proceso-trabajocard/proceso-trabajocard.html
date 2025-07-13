@@ -1,0 +1,15 @@
+ <div class="paso-card">
+      <div class="paso-indicator">
+        <div class="indicator-circle">
+          <span class="step-number">{{ index + 1 }}</span>
+        </div>
+        <div *ngIf="!isLast" class="indicator-line"></div>
+      </div>
+      <div class="paso-content">
+        <div class="paso-header">
+          <img [src]="paso.icono" [alt]="paso.titulo" class="paso-icon">
+          <h3 class="paso-title">{{ paso.titulo }}</h3>
+        </div>
+        <p class="paso-description">{{ paso.descripcion }}</p>
+      </div>
+    </div>

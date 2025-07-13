@@ -1,0 +1,22 @@
+<section class="desarrollos-section">
+  <div class="container">
+    <h2 class="section-title">Nuestros Desarrollos</h2>
+    <p class="section-subtitle">Soluciones tecnológicas a medida para tu negocio</p>
+    
+    <div class="filters">
+      <button 
+        *ngFor="let cat of categorias" 
+        [class.active]="categoriaSeleccionada === cat"
+        (click)="filtrarPorCategoria(cat)">
+        {{ cat }}
+      </button>
+    </div>
+    
+    <div class="desarrollos-grid">
+      <app-desarrollocard *ngFor="let desarrollo of desarrollos" 
+        [desarrollo]="desarrollo">  
+        
+      </app-desarrollocard>
+    </div>
+  </div>
+</section>

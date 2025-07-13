@@ -1,0 +1,163 @@
+/* src/app/components/tecnologias/tecnologias.component.css */
+.tech-carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.technologies-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.technologies-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.technology-card {
+  flex: 0 0 calc(100% / var(--visible-cards, 4));
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.tech-logo-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tech-logo {
+  max-height: 70px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.technology-card:hover .tech-logo {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.skill-level {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.skill-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3182ce, #63b3ed);
+  border-radius: 3px;
+}
+
+.skill-percent {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.carousel-button {
+  background: white;
+  border: 1px solid #cbd5e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: #3182ce;
+  color: white;
+  border-color: #3182ce;
+}
+
+.carousel-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dots span.active {
+  background: #3182ce;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .technology-card {
+    flex: 0 0 calc(100% / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .technology-card {
+    flex: 0 0 50%;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .technology-card {
+    flex: 0 0 100%;
+  }
+  
+  .carousel-button {
+    width: 35px;
+    height: 35px;
+  }
+}

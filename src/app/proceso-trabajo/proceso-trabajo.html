@@ -1,0 +1,13 @@
+   <section class="proceso-section">
+      <div class="container">
+        <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
+        <p class="section-subtitle">Metodología probada para garantizar resultados exitosos</p>
+        
+        <div class="timeline">
+          <app-proceso-trabajocard *ngFor="let paso of pasos; let i = index" 
+            [paso]="paso"
+            [index]="i"
+            [totalPasos]="pasos.length"></app-proceso-trabajocard>
+        </div>
+      </div>
+    </section>
