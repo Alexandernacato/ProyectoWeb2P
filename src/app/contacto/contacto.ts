@@ -22,17 +22,17 @@ export class Contacto {
     {
       titulo: 'Teléfono',
       detalle: '+34 123456789\nLun - Vie: 09:00 - 18:00',
-      icono: 'assets/icons/telefono.svg'
+      icono: 'assets/telefono.png'
     },
     {
       titulo: 'Email',
       detalle: 'info@devsoft.com\nproyectos@devsoft.co',
-      icono: 'assets/icons/email.svg'
+      icono: 'assets/email.png'
     },
     {
       titulo: 'Oficina',
       detalle: 'Calle Serrano 123\n28001 Madrid, España',
-      icono: 'assets/icons/oficina.svg'
+      icono: 'assets/oficina.png'
     }
   ];
 

@@ -15,22 +15,22 @@ export class ProcesoTrabajoService {
     {
       titulo: '1. Análisis',
       descripcion: 'Entendemos tu necesidad y los objetivos del proyecto.',
-      icono: 'assets/icons/analisis.svg'
+      icono: 'assets/analisis.png'
     },
     {
       titulo: '2. Planificación',
       descripcion: 'Diseñamos una solución tecnológica a medida.',
-      icono: 'assets/icons/planificacion.svg'
+      icono: 'assets/planificacion.png'
     },
     {
       titulo: '3. Desarrollo',
       descripcion: 'Codificamos y construimos el producto con tecnologías de punta.',
-      icono: 'assets/icons/desarrollo.svg'
+      icono: 'assets/desarrolo.png'
     },
     {
       titulo: '4. Entrega',
       descripcion: 'Implementamos la solución y aseguramos su funcionamiento óptimo.',
-      icono: 'assets/icons/entrega.svg'
+      icono: 'assets/entrega.png'
     }
   ];
 
