@@ -1,0 +1,154 @@
+/* Estilos base con tipografía profesional */
+.desarrolladores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  position: relative;
+}
+
+/* Efecto de fondo sutil */
+.desarrolladores-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(67, 97, 238, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Cabecera con estilo premium */
+.header-section {
+  margin-bottom: 4.5rem;
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #112D4E; /* Azul oscuro */
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #0c46a3, #4361EE); /* Azul violeta y azul vivo */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4361EE, #0c1ba3);
+  border-radius: 2px;
+}
+
+.team-description {
+  font-size: 1.15rem;
+  color: #3F72AF; /* Azul medio en lugar de gris */
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Grid de tarjetas mejorado */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+/* Efecto hover en el grid */
+.cards-grid:hover .app-desarrollador-card:not(:hover) {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .desarrolladores-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desarrolladores-container {
+    padding: 3rem 1rem;
+  }
+
+  .main-title {
+    font-size: 2.25rem;
+  }
+
+  .team-description {
+    font-size: 1.05rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header-section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.cards-grid {
+  animation: fadeIn 0.8s 0.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Efecto de carga progresiva */
+.app-desarrollador-card {
+  transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Scroll suave para el contenedor */
+@media (prefers-reduced-motion: no-preference) {
+  .desarrolladores-container {
+    scroll-behavior: smooth;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}

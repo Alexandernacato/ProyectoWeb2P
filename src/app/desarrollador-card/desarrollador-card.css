@@ -1,0 +1,139 @@
+/* Estilo base con tipografía moderna */
+.dev-card {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+/* Efecto hover elegante */
+.dev-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Borde decorativo animado - Azul profesional */
+.dev-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3B82F6, #1D4ED8);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.dev-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Estilo para el nombre */
+.dev-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2B2D42;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+/* Subrayado azul - Coherente con borde */
+.dev-name::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #3B82F6, #1D4ED8);
+  border-radius: 3px;
+}
+
+/* Estilo para los detalles */
+.dev-details {
+  margin: 1.8rem 0;
+}
+
+.dev-position {
+  font-size: 1rem;
+  color: #4A5568;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.dev-skills {
+  font-size: 0.95rem;
+  color: #718096;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Estilo para el botón - Azul vibrante */
+.dev-more {
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover del botón - Azul más intenso */
+.dev-more::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dev-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.3);
+}
+
+.dev-more:hover::after {
+  opacity: 1;
+}
+
+.dev-more span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto de "salto" al hacer hover en la tarjeta */
+@keyframes cardJump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(-5px); }
+}
+
+.dev-card:hover {
+  animation: cardJump 0.4s ease forwards;
+}

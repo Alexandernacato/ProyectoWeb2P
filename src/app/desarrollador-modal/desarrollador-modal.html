@@ -1,0 +1,22 @@
+ <div class="modal-overlay" *ngIf="visible && desarrollador">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-button" (click)="cerrar()">&times;</button>
+        
+        <div class="modal-body">
+          <div class="modal-header">
+            <img [src]="desarrollador.foto" [alt]="desarrollador.nombre" class="modal-image">
+            <h2>{{ desarrollador.nombre }}</h2>
+            <p class="cargo">{{ desarrollador.cargo }}</p>
+          </div>
+          
+          <div class="modal-details">
+            <h3>Especialidad</h3>
+            <p>{{ desarrollador.especialidad }}</p>
+            
+            <!-- Aquí puedes añadir más secciones si necesitas -->
+            <!-- <h3>Proyectos</h3>
+            <p>{{ desarrollador.proyectos }}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>

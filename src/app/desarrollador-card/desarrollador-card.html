@@ -1,0 +1,10 @@
+ <div class="dev-card">
+      <h3 class="dev-name">{{desarrollador.nombre}}</h3>
+      
+      <div class="dev-details">
+        <p class="dev-position">{{desarrollador.cargo}}</p>
+        <p class="dev-skills">{{desarrollador.especialidad}}</p>
+      </div>
+      
+      <button class="dev-more" (click)="verMas.emit(desarrollador.id)">Ver más</button>
+    </div>

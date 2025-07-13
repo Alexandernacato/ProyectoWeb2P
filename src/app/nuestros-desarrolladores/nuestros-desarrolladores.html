@@ -1,0 +1,26 @@
+<section class="desarrolladores-container">
+  <!-- Cabecera con título y descripción -->
+  <div class="header-section">
+    <h1 class="main-title">Nuestro Equipo de Desarrollo</h1>
+    <p class="team-description">
+      Conoce al talentoso equipo detrás de nuestros proyectos. Expertos en diversas tecnologías 
+      comprometidos con la excelencia y la innovación en cada solución que desarrollamos.
+    </p>
+  </div>
+
+  <!-- Grid de desarrolladores -->
+  <div class="cards-grid">
+    <app-desarrollador-card 
+      *ngFor="let dev of desarrolladores" 
+      [desarrollador]="dev"
+      (verMas)="abrirModal($event)">
+    </app-desarrollador-card>
+  </div>
+
+  <!-- Modal -->
+  <app-desarrollador-modal
+    [desarrollador]="desarrolladorSeleccionado"
+    [visible]="modalVisible"
+    (close)="cerrarModal()">
+  </app-desarrollador-modal>
+</section>

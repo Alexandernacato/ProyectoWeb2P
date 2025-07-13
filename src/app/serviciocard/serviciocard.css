@@ -7,6 +7,9 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+        margin: 5px;
+          gap: 20px;
+
     }
     .servicio-card:hover {
       transform: translateY(-5px);
@@ -36,6 +39,7 @@
     .servicio-features {
       list-style: none;
       padding: 0;
+      margin: 0;
       margin-bottom: 2rem;
     }
     .feature-item {
