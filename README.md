@@ -1,60 +1,35 @@
-# EmpresaSoftware
+# 🚀 DevSoft - Plataforma de Desarrollo Profesional  
+**Angular • TypeScript • SCSS**  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+<div align="center">
+  <img src="https://img.shields.io/badge/Angular-19-DD0031?logo=angular" alt="Angular">
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/badge/SCSS-3.0-CC6699?logo=sass" alt="SCSS">
+</div>
 
-## Development server
+## 📋 Descripción  
+DevSoft es una plataforma corporativa que muestra nuestros servicios de desarrollo de software y equipo técnico especializado. Desarrollado con Angular 19 utilizando componentes standalone.
 
-To start a local development server, run:
-
+## 🏗️ Estructura del Proyecto (Exacta)
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-"# ProyectoWeb2P" 
+src/app/
+├── contacto/               # Página de contacto
+├── desarrollador-card/     # Componente de tarjeta
+├── desarrollador-modal/    # Modal de perfil
+├── desarrollos/            # Proyectos destacados
+├── experiencia/            # Sección experiencia
+├── experiencia-card/       # Cards de experiencia
+├── footer/                 # Componente footer
+├── header/                 # Componente header
+├── hero/                   # Sección hero
+├── home/                   # Página principal
+├── nuestros-desarrolladores/ # Equipo completo
+├── proceso-trabajo/        # Metodología
+├── proceso-trabajocard/    # Cards de proceso
+├── quienes-somos/          # Sobre nosotros
+├── service/                # Servicios API
+├── servicio/               # Página servicios
+├── serviciocard/           # Cards de servicio
+├── tecnologias/            # Stack tecnológico
+├── testimonio/             # Testimonios
+└── testimoniocard/         # Cards de testimonio
