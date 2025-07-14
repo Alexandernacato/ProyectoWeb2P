@@ -33,3 +33,30 @@ src/app/
 ├── tecnologias/            # Stack tecnológico
 ├── testimonio/             # Testimonios
 └── testimoniocard/         # Cards de testimonio
+### Instrucciones para ejecutar la imagen Docker
+
+```bash
+# Iniciar sesión en Docker Hub (si no estás logueado)
+docker login
+# Usuario: alexander553
+# Ingresa tu contraseña de Docker Hub cuando se solicite
+
+# Descargar la imagen desde Docker Hub
+docker pull alexander553/empresa-angular:latest
+
+# Ejecutar el contenedor Docker en el puerto 80
+docker run -d -p 80:80 --name empresa-web alexander553/empresa-angular:latest
+
+# Si el puerto 80 está ocupado, usa otro puerto, por ejemplo 8080
+docker run -d -p 8080:80 --name empresa-web alexander553/empresa-angular:latest
+
+# Acceder a la aplicación en el navegador:
+# http://localhost
+# o http://localhost:8080 si usaste otro puerto
+
+# Detener el contenedor
+docker stop empresa-web
+
+# Eliminar el contenedor
+docker rm empresa-web
+```
