@@ -1,22 +1,38 @@
- <div class="modal-overlay" *ngIf="visible && desarrollador">
-      <div class="modal-content" (click)="$event.stopPropagation()">
-        <button class="close-button" (click)="cerrar()">&times;</button>
-        
-        <div class="modal-body">
-          <div class="modal-header">
-            <img [src]="desarrollador.foto" [alt]="desarrollador.nombre" class="modal-image">
-            <h2>{{ desarrollador.nombre }}</h2>
-            <p class="cargo">{{ desarrollador.cargo }}</p>
+<div class="modal-overlay" *ngIf="visible && desarrollador">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="cerrar()" aria-label="Cerrar modal">
+      &times;
+    </button>
+    
+    <div class="modal-body">
+      <div class="developer-profile">
+        <div class="profile-header">
+          <img [src]="desarrollador.foto" [alt]="desarrollador.nombre" class="profile-image">
+          <div class="profile-titles">
+            <h2 class="profile-name">{{ desarrollador.nombre }}</h2>
+            <p class="profile-position">{{ desarrollador.cargo }}</p>
+            <div class="specialty-tag">{{ desarrollador.especialidad }}</div>
           </div>
+        </div>
+        
+        <div class="profile-content">
+          <p class="profile-description">{{ desarrollador.descripcion }}</p>
           
-          <div class="modal-details">
-            <h3>Especialidad</h3>
-            <p>{{ desarrollador.especialidad }}</p>
-            
-            <!-- Aquí puedes añadir más secciones si necesitas -->
-            <!-- <h3>Proyectos</h3>
-            <p>{{ desarrollador.proyectos }}</p> -->
+          <div class="skills-section">
+            <h3 class="section-title">Habilidades Principales</h3>
+            <div class="skills-grid">
+              <div class="skill-card" *ngFor="let skill of desarrollador.habilidades">
+                <div class="skill-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="skill-name">{{ skill }}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
